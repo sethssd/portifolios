@@ -1,3 +1,4 @@
+import logoArt from './icons/DayDevWhite.png'
 import './App.css'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
@@ -11,13 +12,13 @@ function App() {
         top: 0,
         width: '100%',
         zIndex: 1000,
-        background: 'rgba(0,0,0,0.8)',
+        background: 'rgba(0,0,0,0.95)',
         backdropFilter: 'blur(10px)',
         borderBottom: '1px solid var(--glass-border)'
       }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', padding: '0.8rem 2rem', alignItems: 'center' }}>
-          <div className="logo" style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-1px' }}>
-            DAY<span style={{ color: 'var(--primary)' }}>.</span>DEV
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 2rem', alignItems: 'center' }}>
+          <div className="logo">
+            <img src={logoArt} alt="DAY.DEV" style={{ height: '35px', display: 'block' }} />
           </div>
           <ul style={{ display: 'flex', gap: '2.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
             <li><a href="#home">Home</a></li>
@@ -29,10 +30,10 @@ function App() {
       </nav>
 
       <main>
-        <header id="home" className="container" style={{ textAlign: 'center', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '5rem' }}>
+        <header id="home" className="container" style={{ textAlign: 'center', minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '6rem' }}>
           <div style={{
             display: 'inline-block',
-            background: 'rgba(0,112,243,0.1)',
+            background: 'rgba(0,112,243,0.2)',
             color: 'var(--primary)',
             padding: '0.5rem 1.2rem',
             borderRadius: '20px',
@@ -59,7 +60,9 @@ function App() {
         </header>
 
         <Skills />
-        <Projects />
+        <div style={{ marginTop: '5rem' }}>
+          <Projects />
+        </div>
         <Contact />
       </main>
     </div>

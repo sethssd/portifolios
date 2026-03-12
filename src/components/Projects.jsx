@@ -1,21 +1,33 @@
+import detailPage from '../assets/detail_page.jpeg'
+import homeScreen from '../assets/home_screen.jpeg'
+import webEdição from '../assets/webPage_Edicaocell .jpeg'
+import webPlantas from '../assets/webPage_plantascell.jpeg'
+import crowmaImg from '../assets/crowma.jpeg'
+
 export default function Projects() {
     const projects = [
         {
-            title: 'E-commerce Moderno',
-            description: 'Uma plataforma de vendas com integração de pagamentos e painel administrativo.',
-            tech: ['React', 'Node.js', 'Stripe'],
+            title: 'SUMAÚMA APP',
+            description: 'Enciclopédia de Plantas da Amazônia. Aplicativo mobile com catálogo etnobotânico completo e suporte a modelos 3D.',
+            tabs: ['Aba Geral', 'Aba Científica', 'Aba Referências'],
+            images: [homeScreen, detailPage],
+            tech: ['Flutter', 'Firebase', 'Cloudinary', '3D Models'],
             link: '#'
         },
         {
-            title: 'App de Clima Pro',
-            description: 'Previsão do tempo em tempo real com visualizações de dados dinâmicas.',
-            tech: ['JavaScript', 'API OpenWeather', 'Chart.js'],
+            title: 'Painel Administrativo Web',
+            description: 'Interface de gestão poderosa com CRUD completo de plantas e controle de usuários em tempo real.',
+            tabs: ['Gestão de Plantas', 'Controle de Usuários', 'Solicitações'],
+            images: [webPlantas, webEdição],
+            tech: ['HTML5', 'CSS3', 'JavaScript', 'Firebase SDK'],
             link: '#'
         },
         {
-            title: 'Task Master',
-            description: 'Gerenciador de tarefas inteligente com persistência de dados local.',
-            tech: ['React', 'LocalStorage', 'CSS Grid'],
+            title: 'Crowma Dashboard',
+            description: 'Sistema de monitoramento e análise de dados para gestão de recursos e automação.',
+            tabs: ['Monitoramento', 'Relatórios', 'Automação'],
+            images: [crowmaImg],
+            tech: ['Node.js', 'React', 'MongoDB'],
             link: '#'
         }
     ];
@@ -26,41 +38,104 @@ export default function Projects() {
                 Projetos <span style={{ color: 'var(--primary)' }}>Destaques</span>
             </h2>
             <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-                gap: '2rem'
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '4rem'
             }}>
-                {projects.map((project) => (
-                    <div key={project.title} className="glass-card" style={{ padding: '2rem', transition: 'transform 0.3s ease', cursor: 'pointer' }}>
+                {projects.map((project, idx) => (
+                    <div key={project.title} className="glass-card" style={{
+                        padding: '2.5rem',
+                        display: 'flex',
+                        flexDirection: idx % 2 === 0 ? 'row' : 'row-reverse',
+                        gap: '3rem',
+                        alignItems: 'center',
+                        flexWrap: 'wrap'
+                    }}>
+                        {/* Visual Side */}
                         <div style={{
-                            width: '100%',
-                            height: '180px',
-                            background: 'rgba(255,255,255,0.03)',
-                            borderRadius: '8px',
-                            marginBottom: '1.5rem',
+                            flex: '1 1 450px',
                             display: 'flex',
-                            alignItems: 'center',
+                            gap: '1rem',
                             justifyContent: 'center',
-                            fontSize: '3rem',
-                            color: 'var(--text-muted)'
+                            position: 'relative',
+                            minHeight: '350px'
                         }}>
-                            🚀
-                        </div>
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{project.title}</h3>
-                        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1rem' }}>{project.description}</p>
-                        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                            {project.tech.map((t) => (
-                                <span key={t} style={{
-                                    background: 'rgba(0,112,243,0.1)',
-                                    color: 'var(--primary)',
-                                    padding: '0.2rem 0.8rem',
-                                    borderRadius: '15px',
-                                    fontSize: '0.8rem',
-                                    fontWeight: 600
+                            {project.images ? (
+                                project.images.map((img, i) => (
+                                    <div key={i} style={{
+                                        width: (project.title.includes('Web') || project.title.includes('Crowma')) ? '220px' : '200px',
+                                        borderRadius: '12px',
+                                        overflow: 'hidden',
+                                        boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                                        border: '1px solid var(--glass-border)',
+                                        transform: `translateY(${i * 30}px) translateX(${i * -20}px)`,
+                                        zIndex: 2 - i,
+                                        transition: 'transform 0.3s ease'
+                                    }}>
+                                        <img src={img} alt={project.title} style={{ width: '100%', display: 'block' }} />
+                                    </div>
+                                ))
+                            ) : (
+                                <div style={{
+                                    width: '100%',
+                                    height: '250px',
+                                    background: 'linear-gradient(135deg, rgba(0,112,243,0.1), rgba(255,0,128,0.1))',
+                                    borderRadius: '12px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    fontSize: '4rem'
                                 }}>
-                                    {t}
-                                </span>
-                            ))}
+                                    🖥️
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Content Side */}
+                        <div style={{ flex: '1 1 350px' }}>
+                            <div style={{
+                                display: 'inline-block',
+                                background: 'rgba(0,112,243,0.1)',
+                                color: 'var(--primary)',
+                                padding: '0.4rem 1rem',
+                                borderRadius: '20px',
+                                fontSize: '0.75rem',
+                                fontWeight: 700,
+                                marginBottom: '1rem'
+                            }}>
+                                PROJETO EM DESTAQUE
+                            </div>
+                            <h3 style={{ fontSize: '2.2rem', marginBottom: '1.5rem' }}>{project.title}</h3>
+                            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: 1.6 }}>{project.description}</p>
+
+                            {project.tabs && (
+                                <div style={{ marginBottom: '2.5rem' }}>
+                                    <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Recursos principais:</div>
+                                    <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
+                                        {project.tabs.map(tab => (
+                                            <div key={tab} style={{ fontSize: '0.95rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                                                <span style={{ color: 'var(--primary)', fontSize: '1.1rem' }}>✦</span> {tab}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
+                                {project.tech.map((t) => (
+                                    <span key={t} style={{
+                                        background: 'rgba(255,255,255,0.05)',
+                                        padding: '0.5rem 1.2rem',
+                                        borderRadius: '100px',
+                                        fontSize: '0.8rem',
+                                        fontWeight: 600,
+                                        border: '1px solid var(--glass-border)',
+                                        color: 'var(--text)'
+                                    }}>
+                                        {t}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 ))}
