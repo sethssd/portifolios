@@ -43,34 +43,34 @@ export default function Projects() {
                 gap: '4rem'
             }}>
                 {projects.map((project, idx) => (
-                    <div key={project.title} className="glass-card" style={{
-                        padding: '2.5rem',
+                    <div key={project.title} className="glass-card project-card" style={{
+                        padding: 'clamp(1.5rem, 5vw, 2.5rem)',
                         display: 'flex',
-                        flexDirection: idx % 2 === 0 ? 'row' : 'row-reverse',
+                        flexDirection: 'column',
                         gap: '3rem',
-                        alignItems: 'center',
-                        flexWrap: 'wrap'
+                        alignItems: 'center'
                     }}>
                         {/* Visual Side */}
-                        <div style={{
-                            flex: '1 1 450px',
+                        <div className="project-visual" style={{
+                            width: '100%',
                             display: 'flex',
                             gap: '1rem',
                             justifyContent: 'center',
                             position: 'relative',
-                            minHeight: '350px'
+                            minHeight: 'clamp(250px, 50vw, 350px)',
+                            perspective: '1000px'
                         }}>
                             {project.images ? (
                                 project.images.map((img, i) => (
                                     <div key={i} style={{
-                                        width: (project.title.includes('Web') || project.title.includes('Crowma')) ? '220px' : '200px',
+                                        width: (project.title.includes('Web') || project.title.includes('Crowma')) ? 'clamp(140px, 45%, 220px)' : 'clamp(120px, 40%, 200px)',
                                         borderRadius: '12px',
                                         overflow: 'hidden',
                                         boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
                                         border: '1px solid var(--glass-border)',
-                                        transform: `translateY(${i * 30}px) translateX(${i * -20}px)`,
+                                        transform: `translateY(${i * 20}px) translateX(${i * -15}px) rotateY(${i * -2}deg)`,
                                         zIndex: 2 - i,
-                                        transition: 'transform 0.3s ease'
+                                        transition: 'all 0.3s ease'
                                     }}>
                                         <img src={img} alt={project.title} style={{ width: '100%', display: 'block' }} />
                                     </div>
@@ -92,7 +92,7 @@ export default function Projects() {
                         </div>
 
                         {/* Content Side */}
-                        <div style={{ flex: '1 1 350px' }}>
+                        <div className="project-content" style={{ width: '100%', textAlign: 'left' }}>
                             <div style={{
                                 display: 'inline-block',
                                 background: 'rgba(0,112,243,0.1)',

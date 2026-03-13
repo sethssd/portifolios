@@ -22,8 +22,8 @@ export default function Skills() {
             </h2>
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                gap: '2rem'
+                gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(250px, 100%, 350px), 1fr))',
+                gap: 'clamp(1rem, 3vw, 2rem)'
             }}>
                 {skills.map((skill) => (
                     <div key={skill.name} className="glass-card" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
