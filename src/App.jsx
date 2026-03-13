@@ -18,15 +18,16 @@ function App() {
         paddingTop: 'calc(0.75rem + env(safe-area-inset-top))',
         paddingBottom: '0.75rem'
       }}>
-        <div className="container" style={{
+        <div className="container nav-container" style={{
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'center'
+          alignItems: 'center',
+          padding: '0'
         }}>
-          <div className="logo" style={{ marginLeft: '-0.2rem' }}>
-            <img src={logoArt} alt="DAY.DEV" style={{ height: '30px', display: 'block' }} />
+          <div className="logo" style={{ marginLeft: '-0.5rem' }}>
+            <img src={logoArt} alt="DAY.DEV" style={{ height: '28px', display: 'block' }} />
           </div>
-          <ul className="nav-links" style={{ display: 'flex', gap: '2.5rem', fontWeight: 500, fontSize: '0.9rem' }}>
+          <ul className="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">Habilidades</a></li>
             <li><a href="#projects">Projetos</a></li>
