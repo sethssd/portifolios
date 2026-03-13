@@ -15,13 +15,12 @@ function App() {
         background: 'rgba(0,0,0,0.4)',
         backdropFilter: 'blur(12px)',
         borderBottom: '1px solid var(--glass-border)',
-        paddingTop: 'calc(0.5rem + env(safe-area-inset-top))',
-        paddingBottom: '0.5rem'
+        paddingTop: 'calc(0.75rem + env(safe-area-inset-top))',
+        paddingBottom: '0.75rem'
       }}>
         <div className="container" style={{
           display: 'flex',
           justifyContent: 'space-between',
-          padding: '0.75rem 0',
           alignItems: 'center'
         }}>
           <div className="logo" style={{ marginLeft: '-0.2rem' }}>
