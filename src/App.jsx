@@ -10,6 +10,8 @@ function App() {
       <nav className="nav" style={{
         position: 'fixed',
         top: 0,
+        left: 0,
+        right: 0,
         width: '100%',
         zIndex: 1000,
         background: 'rgba(0,0,0,0.4)',
