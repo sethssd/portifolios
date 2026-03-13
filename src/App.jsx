@@ -16,7 +16,6 @@ function App() {
         zIndex: 1000,
         background: 'rgba(0,0,0,0.4)',
         backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid var(--glass-border)',
         paddingTop: 'calc(0.75rem + env(safe-area-inset-top))',
         paddingBottom: '0.75rem'
       }}>
