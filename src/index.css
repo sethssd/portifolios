@@ -1,6 +1,6 @@
 :root {
   --primary: #0070f3;
-  --secondary: #ff0080;
+  --secondary: #ff3399;
   --bg: #000000;
   --text: #ffffff;
   --text-muted: #888888;
@@ -46,7 +46,9 @@ ul {
   border-radius: 12px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   letter-spacing: -0.05em;
 }

@@ -12,8 +12,8 @@ function App() {
         top: 0,
         width: '100%',
         zIndex: 1000,
-        background: 'rgba(0,0,0,0.95)',
-        backdropFilter: 'blur(10px)',
+        background: 'rgba(0,0,0,0.4)',
+        backdropFilter: 'blur(12px)',
         borderBottom: '1px solid var(--glass-border)'
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 2rem', alignItems: 'center' }}>
