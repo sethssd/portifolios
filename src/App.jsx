@@ -15,7 +15,8 @@ function App() {
         background: 'rgba(0,0,0,0.4)',
         backdropFilter: 'blur(12px)',
         borderBottom: '1px solid var(--glass-border)',
-        paddingTop: 'env(safe-area-inset-top)'
+        paddingTop: 'calc(0.5rem + env(safe-area-inset-top))',
+        paddingBottom: '0.5rem'
       }}>
         <div className="container" style={{
           display: 'flex',
@@ -42,7 +43,7 @@ function App() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          paddingTop: 'calc(6rem + env(safe-area-inset-top))'
+          paddingTop: 'calc(8rem + env(safe-area-inset-top))'
         }}>
           <div style={{
             display: 'inline-block',
