@@ -102,6 +102,8 @@ ul {
 
 .nav-container {
   padding: 0 1.5rem !important;
+  max-width: none !important;
+  width: 100% !important;
 }
 
 @media (max-width: 768px) {

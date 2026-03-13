@@ -24,8 +24,8 @@ function App() {
           alignItems: 'center',
           padding: '0'
         }}>
-          <div className="logo" style={{ marginLeft: '-0.5rem' }}>
-            <img src={logoArt} alt="DAY.DEV" style={{ height: '28px', display: 'block' }} />
+          <div className="logo" style={{ marginLeft: '0.5rem' }}>
+            <img src={logoArt} alt="DAY.DEV" style={{ height: '32px', display: 'block' }} />
           </div>
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
