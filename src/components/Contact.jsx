@@ -7,13 +7,13 @@ export default function Contact() {
                     Estou sempre em busca de novos desafios e oportunidades interessantes. Meu inbox está sempre aberto!
                 </p>
                 <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <a href="#" style={{ background: 'var(--text)', color: 'var(--bg)', padding: '1rem 2.5rem', borderRadius: '8px', fontWeight: 600 }}>Diga Olá</a>
-                    <a href="#" style={{ border: '1px solid var(--glass-border)', padding: '1rem 2.5rem', borderRadius: '8px', fontWeight: 600, background: 'rgba(255,255,255,0.02)' }}>GitHub</a>
+                    <a href="https://www.instagram.com/dfabs__/" target="_blank" rel="noopener noreferrer" style={{ background: 'var(--text)', color: 'var(--bg)', padding: '1rem 2.5rem', borderRadius: '8px', fontWeight: 600 }}>Diga Olá</a>
+                    <a href="https://github.com/sethssd" target="_blank" rel="noopener noreferrer" style={{ border: '1px solid var(--glass-border)', padding: '1rem 2.5rem', borderRadius: '8px', fontWeight: 600, background: 'rgba(255,255,255,0.02)' }}>GitHub</a>
                 </div>
             </div>
 
             <footer style={{ marginTop: '8rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                <p>© {new Date().getFullYear()} - Desenvolvido com ❤️ por Você</p>
+                <p>© {new Date().getFullYear()} - Desenvolvido com ❤️ por sethssd</p>
             </footer>
         </section>
     );
