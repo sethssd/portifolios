@@ -42,6 +42,40 @@ ul {
 }
 
 @media (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+  }
+}
+
+/* Hero Section Desktop Tweaks */
+@media (min-width: 1025px) {
+  header#home {
+    min-height: 90vh !important;
+    padding-top: 8rem !important;
+  }
+
+  header#home h1 {
+    max-width: 900px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Skills Grid Desktop Tweaks */
+.skills-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 2.5rem !important;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
   .container {
     padding: 0 1.5rem;
     padding-left: calc(1.5rem + env(safe-area-inset-left));
@@ -94,8 +128,58 @@ section {
   padding: 8rem 0;
 }
 
-@media (max-width: 768px) {
-  section {
-    padding: 4rem 0;
+/* Project Cards Responsiveness */
+.project-card {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 4rem !important;
+  padding: 3rem !important;
+  align-items: center !important;
+}
+
+.project-card:nth-child(even) {
+  flex-direction: row-reverse !important;
+}
+
+.project-visual {
+  flex: 1.2 !important;
+  width: auto !important;
+  min-height: 400px !important;
+}
+
+.project-content {
+  flex: 1 !important;
+  width: auto !important;
+}
+
+@media (max-width: 1024px) {
+  .project-card {
+    flex-direction: column !important;
+    gap: 2.5rem !important;
+    padding: 2rem !important;
+  }
+
+  .project-card:nth-child(even) {
+    flex-direction: column !important;
+  }
+
+  .project-visual {
+    width: 100% !important;
+    min-height: 300px !important;
+  }
+
+  .project-content {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 1.5rem !important;
+    gap: 2rem !important;
+  }
+
+  .project-visual {
+    min-height: 250px !important;
   }
 }

@@ -43,21 +43,13 @@ export default function Projects() {
                 gap: '4rem'
             }}>
                 {projects.map((project, idx) => (
-                    <div key={project.title} className="glass-card project-card" style={{
-                        padding: 'clamp(1.5rem, 5vw, 2.5rem)',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '3rem',
-                        alignItems: 'center'
-                    }}>
+                    <div key={project.title} className="glass-card project-card">
                         {/* Visual Side */}
                         <div className="project-visual" style={{
-                            width: '100%',
                             display: 'flex',
                             gap: '1rem',
                             justifyContent: 'center',
                             position: 'relative',
-                            minHeight: 'clamp(250px, 50vw, 350px)',
                             perspective: '1000px'
                         }}>
                             {project.images ? (
@@ -92,7 +84,7 @@ export default function Projects() {
                         </div>
 
                         {/* Content Side */}
-                        <div className="project-content" style={{ width: '100%', textAlign: 'left' }}>
+                        <div className="project-content">
                             <div style={{
                                 display: 'inline-block',
                                 background: 'rgba(0,112,243,0.1)',

@@ -20,11 +20,7 @@ export default function Skills() {
             <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
                 Minhas <span style={{ color: 'var(--secondary)' }}>Habilidades</span>
             </h2>
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(clamp(250px, 100%, 350px), 1fr))',
-                gap: 'clamp(1rem, 3vw, 2rem)'
-            }}>
+            <div className="skills-grid">
                 {skills.map((skill) => (
                     <div key={skill.name} className="glass-card" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
