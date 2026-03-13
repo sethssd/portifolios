@@ -92,14 +92,6 @@ ul {
 }
 
 /* Navbar Adaptations */
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
 .nav-container {
   padding: 0 1.5rem !important;
   max-width: none !important;
@@ -107,22 +99,12 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    gap: 1.2rem;
-    font-size: 0.8rem;
-  }
-
   .nav-container {
     padding: 0 1rem !important;
   }
 }
 
 @media (max-width: 480px) {
-  .nav-links {
-    gap: 0.45rem;
-    font-size: 0.68rem;
-  }
-
   .nav-container {
     padding: 0 0.5rem !important;
   }
@@ -133,11 +115,6 @@ ul {
 }
 
 @media (max-width: 360px) {
-  .nav-links {
-    gap: 0.35rem;
-    font-size: 0.62rem;
-  }
-
   .nav-container {
     padding: 0 0.25rem !important;
   }

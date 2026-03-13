@@ -20,19 +20,13 @@ function App() {
       }}>
         <div className="container nav-container" style={{
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
           alignItems: 'center',
           padding: '0'
         }}>
-          <div className="logo" style={{ marginLeft: '0.5rem' }}>
+          <div className="logo">
             <img src={logoArt} alt="DAY.DEV" style={{ height: '32px', display: 'block' }} />
           </div>
-          <ul className="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#contact">Contato</a></li>
-          </ul>
         </div>
       </nav>
 
