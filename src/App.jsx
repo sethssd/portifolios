@@ -34,11 +34,11 @@ function App() {
       <main style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
         <header id="home" className="container" style={{
           textAlign: 'center',
-          minHeight: '85vh',
+          minHeight: '50vh',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          paddingTop: 'calc(8rem + env(safe-area-inset-top))'
+          justifyContent: 'flex-start',
+          paddingTop: 'calc(5rem + env(safe-area-inset-top))'
         }}>
           <div style={{
             display: 'inline-block',

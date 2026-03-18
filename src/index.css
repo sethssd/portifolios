@@ -45,7 +45,7 @@ ul {
 @media (max-width: 768px) {
   section {
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 0;
   }
 }
 
@@ -137,8 +137,8 @@ h3 {
 }
 
 section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 0;
 }
 
 /* Project Cards Responsiveness */
