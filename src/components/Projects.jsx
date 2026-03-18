@@ -35,7 +35,11 @@ export default function Projects() {
     return (
         <section className="container" id="projects">
             <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
-                Projetos <span style={{ color: 'var(--primary)' }}>Destaques</span>
+                Projetos <span style={{ 
+                    background: 'linear-gradient(90deg, #187cf4, #664dcd)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                }}>Destaques</span>
             </h2>
             <div style={{
                 display: 'flex',

@@ -1,7 +1,7 @@
 export default function Contact() {
     return (
-        <section className="container" id="contact" style={{ textAlign: 'center', marginTop: '10rem' }}>
-            <div className="glass-card" style={{ padding: '4rem 2rem' }}>
+        <section className="container" id="contact" style={{ textAlign: 'center' }}>
+            <div>
                 <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Vamos trabalhar <span style={{ color: 'var(--primary)' }}>juntos</span>?</h2>
                 <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
                     Estou sempre em busca de novos desafios e oportunidades interessantes. Meu inbox está sempre aberto!

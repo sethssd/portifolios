@@ -16,8 +16,8 @@ function App() {
         zIndex: 1000,
         background: 'rgba(0,0,0,0.4)',
         backdropFilter: 'blur(12px)',
-        paddingTop: 'calc(0.75rem + env(safe-area-inset-top))',
-        paddingBottom: '0.75rem'
+        paddingTop: 'calc(0.4rem + env(safe-area-inset-top))',
+        paddingBottom: '0.4rem'
       }}>
         <div className="container nav-container" style={{
           display: 'flex',
@@ -69,7 +69,7 @@ function App() {
         </header>
 
         <Skills />
-        <div style={{ marginTop: '5rem' }}>
+        <div>
           <Projects />
         </div>
         <Contact />

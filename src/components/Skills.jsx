@@ -16,9 +16,13 @@ export default function Skills() {
     ];
 
     return (
-        <section className="container" id="skills" style={{ marginBottom: '8rem' }}>
+        <section className="container" id="skills">
             <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
-                Minhas <span style={{ color: 'var(--secondary)' }}>Habilidades</span>
+                Minhas <span style={{
+                    background: 'linear-gradient(90deg, #b445c9, #ff4c8a)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                }}>Habilidades</span>
             </h2>
             <div className="skills-grid">
                 {skills.map((skill) => (
