@@ -3,6 +3,7 @@ import homeScreen from '../assets/home_screen.jpeg'
 import webEdição from '../assets/webPage_Edicaocell .jpeg'
 import webPlantas from '../assets/webPage_plantascell.jpeg'
 import crowmaImg from '../assets/crowma.jpeg'
+import { motion } from 'framer-motion'
 
 export default function Projects() {
     const projects = [
@@ -32,22 +33,41 @@ export default function Projects() {
         }
     ];
 
+    const cardVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    };
+
     return (
         <section className="container" id="projects">
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
-                Projetos <span style={{ 
+            <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6 }}
+                style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
+                Projetos <span className="animated-gradient" style={{ 
                     background: 'linear-gradient(90deg, #187cf4, #664dcd)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                 }}>Destaques</span>
-            </h2>
+            </motion.h2>
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '4rem'
             }}>
                 {projects.map((project, idx) => (
-                    <div key={project.title} className="glass-card project-card">
+                    <motion.div 
+                        key={project.title} 
+                        variants={cardVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                        whileHover={{ scale: 1.01, boxShadow: '0 30px 60px rgba(0,0,0,0.6)' }}
+                        className="glass-card project-card"
+                        style={{ transition: 'box-shadow 0.4s ease' }}
+                    >
                         {/* Visual Side */}
                         <div className="project-visual" style={{
                             display: 'flex',
@@ -133,7 +153,7 @@ export default function Projects() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>
