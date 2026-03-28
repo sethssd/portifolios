@@ -9,24 +9,24 @@ export default function Projects() {
     const projects = [
         {
             title: 'SUMAÚMA APP',
-            description: 'Enciclopédia de Plantas da Amazônia. Aplicativo mobile com catálogo etnobotânico completo e suporte a modelos 3D.',
-            tabs: ['Aba Geral', 'Aba Científica', 'Aba Referências'],
+            description: 'Amazonian Plants Encyclopedia. Mobile app with a complete ethnobotanical catalog and 3D model support.',
+            tabs: ['General Tab', 'Scientific Tab', 'References Tab'],
             images: [homeScreen, detailPage],
             tech: ['Flutter', 'Firebase', 'Cloudinary', '3D Models'],
             link: '#'
         },
         {
-            title: 'Painel Administrativo Web',
-            description: 'Interface de gestão poderosa com CRUD completo de plantas e controle de usuários em tempo real.',
-            tabs: ['Gestão de Plantas', 'Controle de Usuários', 'Solicitações'],
+            title: 'Web Admin Panel',
+            description: 'Powerful management interface with complete plant CRUD and real-time user control.',
+            tabs: ['Plant Management', 'User Control', 'Requests'],
             images: [webPlantas, webEdição],
             tech: ['HTML5', 'CSS3', 'JavaScript', 'Firebase SDK'],
             link: '#'
         },
         {
             title: 'Crowma Dashboard',
-            description: 'Sistema de monitoramento e análise de dados para gestão de recursos e automação.',
-            tabs: ['Monitoramento', 'Relatórios', 'Automação'],
+            description: 'Monitoring and data analysis system for resource management and automation.',
+            tabs: ['Monitoring', 'Reports', 'Automation'],
             images: [crowmaImg],
             tech: ['Node.js', 'React', 'MongoDB'],
             link: '#'
@@ -46,11 +46,11 @@ export default function Projects() {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6 }}
                 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
-                Projetos <span className="animated-gradient" style={{ 
-                    background: 'linear-gradient(90deg, #187cf4, #664dcd)',
+                Featured <span className="animated-gradient" style={{ 
+                    background: 'linear-gradient(90deg, var(--primary), var(--secondary))',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
-                }}>Destaques</span>
+                }}>Projects</span>
             </motion.h2>
             <div style={{
                 display: 'flex',
@@ -95,14 +95,14 @@ export default function Projects() {
                                 <div style={{
                                     width: '100%',
                                     height: '250px',
-                                    background: 'linear-gradient(135deg, rgba(0,112,243,0.1), rgba(255,0,128,0.1))',
+                                    background: 'linear-gradient(135deg, rgba(74,222,128,0.1), rgba(34,211,238,0.1))',
                                     borderRadius: '12px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     fontSize: '4rem'
                                 }}>
-                                    🖥️
+                                    <span style={{ color: 'var(--primary)' }}>App</span>
                                 </div>
                             )}
                         </div>
@@ -111,22 +111,23 @@ export default function Projects() {
                         <div className="project-content">
                             <div style={{
                                 display: 'inline-block',
-                                background: 'rgba(0,112,243,0.1)',
+                                background: 'rgba(74,222,128,0.1)',
                                 color: 'var(--primary)',
                                 padding: '0.4rem 1rem',
                                 borderRadius: '20px',
                                 fontSize: '0.75rem',
                                 fontWeight: 700,
-                                marginBottom: '1rem'
+                                marginBottom: '1rem',
+                                letterSpacing: '0.05em'
                             }}>
-                                PROJETO EM DESTAQUE
+                                FEATURED PROJECT
                             </div>
                             <h3 style={{ fontSize: '2.2rem', marginBottom: '1.5rem' }}>{project.title}</h3>
                             <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: 1.6 }}>{project.description}</p>
 
                             {project.tabs && (
                                 <div style={{ marginBottom: '2.5rem' }}>
-                                    <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Recursos principais:</div>
+                                    <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Key features:</div>
                                     <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
                                         {project.tabs.map(tab => (
                                             <div key={tab} style={{ fontSize: '0.95rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>

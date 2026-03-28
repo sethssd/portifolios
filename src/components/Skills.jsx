@@ -37,11 +37,11 @@ export default function Skills() {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6 }}
                 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
-                Minhas <span className="animated-gradient" style={{
-                    background: 'linear-gradient(90deg, #b445c9, #ff4c8a)',
+                My <span className="animated-gradient" style={{
+                    background: 'linear-gradient(90deg, var(--primary), var(--secondary))',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
-                }}>Habilidades</span>
+                }}>Skills</span>
             </motion.h2>
             <motion.div 
                 className="skills-grid"
@@ -54,7 +54,7 @@ export default function Skills() {
                     <motion.div 
                         key={skill.name} 
                         variants={itemVariants}
-                        whileHover={{ y: -8, scale: 1.02, boxShadow: '0 20px 40px rgba(255,51,153,0.15)' }}
+                        whileHover={{ y: -8, scale: 1.02, boxShadow: '0 20px 40px rgba(74,222,128,0.1)' }}
                         className="glass-card" 
                         style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem', transition: 'box-shadow 0.3s ease' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
