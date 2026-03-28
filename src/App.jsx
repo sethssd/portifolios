@@ -106,15 +106,15 @@ function App() {
             initial="hidden"
             animate="visible"
             style={{ 
-              fontSize: 'clamp(3rem, 12vw, 6rem)', 
-              lineHeight: 1.05, 
+              fontSize: 'clamp(2.2rem, 8vw, 5.5rem)', 
+              lineHeight: 1.1, 
               marginBottom: '1.5rem',
               fontWeight: 800,
               letterSpacing: '-0.03em',
               transformStyle: "preserve-3d"
             }}>
             {renderAnimatedLetters("Creating the future ")}<br/>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'nowrap', gap: '0.3em' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '0.3em' }}>
               <div style={{ whiteSpace: 'nowrap', flexShrink: 0 }}>{renderAnimatedLetters("through")}</div>
               
               <div style={{ display: 'flex', alignItems: 'flex-end', position: 'relative' }}>
