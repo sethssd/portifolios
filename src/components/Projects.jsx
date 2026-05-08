@@ -46,11 +46,7 @@ export default function Projects() {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6 }}
                 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
-                Featured <span className="animated-gradient" style={{ 
-                    background: 'linear-gradient(90deg, var(--primary), var(--secondary))',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent'
-                }}>Projects</span>
+                Featured Projects
             </motion.h2>
             <div style={{
                 display: 'flex',
@@ -131,7 +127,7 @@ export default function Projects() {
                                     <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
                                         {project.tabs.map(tab => (
                                             <div key={tab} style={{ fontSize: '0.95rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                                                <span style={{ color: 'var(--primary)', fontSize: '1.1rem' }}>✦</span> {tab}
+                                                {tab}
                                             </div>
                                         ))}
                                     </div>

@@ -1,0 +1,27 @@
+.intro-welcome-wrap {
+  display: inline-block;
+  width: 100%;
+  max-width: min(780px, 92vw);
+  margin-bottom: 2.5rem;
+}
+
+.intro-welcome-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.intro-welcome-path {
+  fill: none;
+  stroke: #4ade80;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  will-change: stroke-dashoffset;
+}
+
+.intro-dot {
+  fill: #4ade80;
+  filter: drop-shadow(0 0 6px rgba(74,222,128,0.9));
+}

@@ -2,7 +2,7 @@ export default function Contact() {
     return (
         <section className="container" id="contact" style={{ textAlign: 'center' }}>
             <div>
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Let's work <span style={{ color: 'var(--primary)' }}>together</span>?</h2>
+                <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Let's work together?</h2>
                 <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
                     I'm always looking for new challenges and interesting opportunities. My inbox is always open!
                 </p>

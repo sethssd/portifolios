@@ -37,11 +37,7 @@ export default function Skills() {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6 }}
                 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>
-                My <span className="animated-gradient" style={{
-                    background: 'linear-gradient(90deg, var(--primary), var(--secondary))',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent'
-                }}>Skills</span>
+                My Skills
             </motion.h2>
             <motion.div 
                 className="skills-grid"
